@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 project(bool)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "-Wdeprecated-register -Wwritable-strings")
+#set(CMAKE_CXX_FLAGS "-Wdeprecated-register -Wwritable-strings")
 
 find_package(BISON REQUIRED)
 find_package(FLEX REQUIRED)
