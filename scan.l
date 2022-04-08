@@ -3,7 +3,7 @@
 extern int linenum;
 %}
 
-
+%option noyywrap
 
 %%
 (true|TRUE)     { yylval.val = -1; return TRUE; }

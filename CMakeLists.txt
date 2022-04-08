@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.17)
 project(bool)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 #set(CMAKE_CXX_FLAGS "-Wdeprecated-register -Wwritable-strings")
 
 find_package(BISON REQUIRED)
@@ -17,7 +17,7 @@ ADD_FLEX_BISON_DEPENDENCY(scan bool)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 add_executable(bool ${FLEX_scan_OUTPUTS} ${BISON_bool_OUTPUTS})
 
-if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    set(FLEX_LIBRARIES /usr/local/opt/flex/lib/libfl.a)
-endif()
-target_link_libraries(bool ${FLEX_LIBRARIES})
+#if (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+#    set(FLEX_LIBRARIES /usr/local/opt/flex/lib/libfl.a)
+#endif()
+#target_link_libraries(bool ${FLEX_LIBRARIES})
